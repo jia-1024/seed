@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  profiles:
+    active: dev
+  resources:
+    add-mappings: false
+  application:
+    name: XX平台
+
+
+
+
+knife4j:
+  enable: true
+  production: false
+  setting:
+    enableFooter: false
+    swaggerModelName: 请求参数实体类
+
+
+
+logging:
+  level:
+    tracer: trace
+
+
+
