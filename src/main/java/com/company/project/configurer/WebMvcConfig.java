@@ -99,7 +99,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
                     result = new AjaxResult(HttpStatus.HTTP_BAD_REQUEST, e.getMessage());
                 } else if (e instanceof MethodArgumentNotValidException) {
                     // 四个中文以上的异常信息才会被匹配
-                    String msg = ReUtil.findAll("[\u4e00-\u9fa5]{4,}", e.getMessage(), 0).get(0);
+                    String msg = ReUtil.findAll("[\u4e00-\u9fa5,!.。]{4,}", e.getMessage(), 0).get(0);
                     result = new AjaxResult(HttpStatus.HTTP_BAD_REQUEST, msg);
                 } else if (e instanceof MissingServletRequestParameterException) {
                     String msg = MessageFormat.format("缺少参数{0}", ((MissingServletRequestParameterException) e).getParameterName());
