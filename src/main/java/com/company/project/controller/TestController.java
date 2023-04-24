@@ -19,7 +19,7 @@ public class TestController {
     @ApiOperation("欢迎页")
     @GetMapping("/index")
     public String index() {
-        return "Hello World !";
+        return "Hello World!";
     }
 
 
